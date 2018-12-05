@@ -1,5 +1,5 @@
 #!/bin/bash
-ip = curl https://api.ipify.org
+#ip = curl https://api.ipify.org  后期加入IP提示以防止在错误的服务器上运行
 echo "*** 欢迎使用Rsync下载站同步工具  ***"
 echo "请确保此程序正在美国服务器运行"
 echo "*****请选择同步类型*****"
