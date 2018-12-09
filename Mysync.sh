@@ -12,11 +12,13 @@ read varname
 if [ "$varname" == "1" ]
   then
     echo  "美国 -> 中国 增量同步开始..."
-    rsync -avze ssh ../mnt/blockstorage/usdl.wzydale.cn/* root@bj.wzydale.cn:../www/wwwroot/dl.wzydale.cn
+	cd /
+    rsync -avze ssh /mnt/blockstorage/usdl.wzydale.cn/* root@bj.wzydale.cn:../www/wwwroot/dl.wzydale.cn
 elif [ "$varname" == "2" ]
   then
     echo  "中国 -> 美国 增量同步开始..."
-    rsync -avze ssh root@bj.wzydale.cn:../www/wwwroot/dl.wzydale.cn/* ../mnt/blockstorage/usdl.wzydale.cn/
+	cd /
+    rsync -avze ssh root@bj.wzydale.cn:/www/wwwroot/dl.wzydale.cn/* /mnt/blockstorage/usdl.wzydale.cn/
 elif [ "$varname" == "4" ]
   then
     echo  "美国 -> 三丰云 随机图片站同步开始..."
@@ -25,8 +27,9 @@ elif [ "$varname" == "4" ]
 elif [ "$varname" == "3" ]
   then
     echo  "双向同步开始..."
-    rsync -avze ssh ../mnt/blockstorage/usdl.wzydale.cn/* root@bj.wzydale.cn:../www/wwwroot/dl.wzydale.cn    
-    rsync -avze ssh root@bj.wzydale.cn:../www/wwwroot/dl.wzydale.cn/* ../mnt/blockstorage/usdl.wzydale.cn/
+	cd /
+    rsync -avze ssh /mnt/blockstorage/usdl.wzydale.cn/* root@bj.wzydale.cn:../www/wwwroot/dl.wzydale.cn    
+    rsync -avze ssh root@bj.wzydale.cn:../www/wwwroot/dl.wzydale.cn/* /mnt/blockstorage/usdl.wzydale.cn/
 else
     echo "输入错误，请重试"
 fi
