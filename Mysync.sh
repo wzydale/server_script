@@ -20,7 +20,8 @@ elif [ "$varname" == "2" ]
 elif [ "$varname" == "4" ]
   then
     echo  "美国 -> 三丰云 随机图片站同步开始..."
-	rsync -avze ssh ../www/wwwroot/wp.daletech.club/* root@sfy.wzydale.cn:../www/wwwroot/wp.daletech.cn
+	cd /
+	rsync -avze ssh /www/wwwroot/wp.daletech.club/* root@sfy.wzydale.cn:../www/wwwroot/wp.daletech.cn
 elif [ "$varname" == "3" ]
   then
     echo  "双向同步开始..."
