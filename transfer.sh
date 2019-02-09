@@ -4,7 +4,7 @@ echo "*** 欢迎使用Wget.daletech.cn文件传输工具  ***"
 
 
 
-if [ $argv[1] ]
+if [ $argc -eq 2 ]
   then
        # write to output to tmpfile because of progress bar
        curl --progress-bar --upload-file "$1" https://transfer.sh/$(basename $1) | tee /dev/null
