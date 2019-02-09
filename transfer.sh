@@ -6,10 +6,7 @@ echo "*** 欢迎使用Wget.daletech.cn文件传输工具  ***"
 
 if [ $argv[1] ]
        # write to output to tmpfile because of progress bar
-       set -l tmpfile ( mktemp -t transferXXX )
-       curl --progress-bar --upload-file "$argv[1]" http://wget.daletech.cn:8080/(basename $argv[1]) >> $tmpfile
-       cat $tmpfile
-       command rm -f $tmpfile
+       curl --progress-bar --upload-file "$1" https://transfer.sh/$(basename $1) | tee /dev/null;
 else
        echo 'usage: transfer FILE_TO_TRANSFER'
 fi
