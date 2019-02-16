@@ -1,7 +1,5 @@
 #!/bin/bash
-#ip = curl https://api.ipify.org  后期加入IP提示以防止在错误的服务器上运行
 echo "*** 欢迎使用Wget.daletech.cn文件传输工具  ***"
-
 
 
 if [ $argc -eq 2 ]
