@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>分地区跳转</title>
+</head>
+<script type="text/javascript" src="https://pv.sohu.com/cityjson?ie=utf-8"></script> 
+<script type="text/javascript">
+
+function GetQueryString(name)
+{
+     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     var r = window.location.search.substr(1).match(reg);
+     if(r!=null)return  unescape(r[2]); return null;
+}
+
+if (returnCitySN.cid == "CA"){
+window.location.href='http://gradvideo.zbczss.cn/' + GetQueryString("item")
+}
+</script>
+<body>
+未跳
+</body>
+</html>
