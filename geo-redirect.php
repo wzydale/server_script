@@ -4,7 +4,7 @@
 <?php
 	header('Cache-Control:no-cache,must-revalidate');  
 	header('Pragma:no-cache');  
-    $apiKey = "API_ACCESS_TOKEN"; //插入申请的API密钥
+    $apiKey = "API_ACCESS_TOKEN";
     $ipaddr = get_client_ip();
     if ($ipaddr == 'UNKNOWN'){
     	$ipaddr = "114.114.114.114";
@@ -15,17 +15,24 @@
     $decodedLocation = json_decode($location, true);
     $item = $_GET['item'];
     $flagaddr = $decodedLocation['country_flag'];
+    $node_location = $decodedLocation['continent_code'];
     echo "<br>";
     echo "你来自于：";
     echo $decodedLocation['continent_name'];
+    if ($node_location == ""){
+    	echo "API接入失败";
+    	$node_location = "AS";   //如果API失效，将返回亚太地区节点地址
+    }
+    echo "<br>当前最近节点: ";
+    echo $node_location;
     if ($item == "flag"){
     	 Header("HTTP/1.1 301 Mved Permanently");
 		 Header("Location: $flagaddr");
-    } else if ($decodedLocation['continent_code'] == 'AS' and $item != "") {
+    } else if ($node_location == 'AS' and $item != "") {
          echo "<br>你来自亚太地区";
          Header("HTTP/1.1 301 Moved Permanently");
 		 Header("Location: https://os.daletech.cn:880/$item");
-    } else if ($decodedLocation['continent_code'] != 'AS' and $item != "") {
+    } else if ($node_location != 'AS' and $item != "") {
          echo "<br>你来自非亚太地区";
          Header("HTTP/1.1 301 Moved Permanently");
 		 Header("Location: http://usdl.wzydale.cn/$item");
