@@ -1,6 +1,7 @@
 cd
-wget oss.wzydale.cn/speedtest.py
-python3 speedtest.py
+wget oss.wzydale.cn/speedtest
+chmod u+x ./speedtest
+./speedtest
 apt install vnstat -y
 apt install htop -y
 vnstat -u -i eth0
