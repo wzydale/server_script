@@ -7,7 +7,7 @@ cat resultbak > result
 date >> speedtest_log
 sed 's/)/)<br>/g' result > result2
 sed 's/Result/<br>Result/g' result2 > result3
-sed 's/ by Ookla / /g' result3 > result
+sed 's/Server:/Server:<br>/g' result3 > result
 cat result >> speedtest_log
 cat result >> speedtest.html
 rm result3
