@@ -6,7 +6,7 @@ cat speedtestheader2 >> speedtest.html
 cat resultbak > result
 date >> speedtest_log
 
-sed 's/)/)<br>/g' result > result
+sed 's/)/)<br>/g' result > result2
 cat result >> speedtest_log
 cat result >> speedtest.html
 
