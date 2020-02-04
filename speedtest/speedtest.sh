@@ -3,8 +3,10 @@ rm speedtest.html
 cat speedtestheader > speedtest.html
 date >> speedtest.html
 cat speedtestheader2 >> speedtest.html
-./speedtest > result
+cat resultbak > result
 date >> speedtest_log
+
+$sed 's/)/)<br>/' result
 cat result >> speedtest_log
 cat result >> speedtest.html
 
