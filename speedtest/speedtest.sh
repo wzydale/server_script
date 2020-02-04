@@ -22,6 +22,6 @@ rm result2
 cat speedtestfooter >> speedtest.html
 rm /mnt/1twd/smbshare/os_daletech_cn/speedtest.html
 cp ./speedtest.html /mnt/1twd/smbshare/os_daletech_cn/speedtest.html
-cp ./speedtestlog /mnt/1twd/smbshare/os_daletech_cn/speedtest_log.html
+cp ./speedtest_log /mnt/1twd/smbshare/os_daletech_cn/speedtest_log.html
 echo "测速完成"
 date
