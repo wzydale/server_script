@@ -7,7 +7,7 @@ rm speedtest.html
 cat speedtestheader > speedtest.html
 date >> speedtest.html
 cat speedtestheader2 >> speedtest.html
-./speedtest > result
+/root/server_script/speedtest/speedtest > result
 
 date >> speedtest_log
 cat result >> speedtest_log
