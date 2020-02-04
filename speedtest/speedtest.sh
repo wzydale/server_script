@@ -1,7 +1,7 @@
 #!/bin/bash
 TZ='Asia/Shanghai'
 export TZ
-
+echo "开始测速"
 rm speedtest.html
 cat speedtestheader > speedtest.html
 date >> speedtest.html
@@ -18,3 +18,5 @@ rm result2
 cat speedtestfooter >> speedtest.html
 rm /mnt/1twd/smbshare/os_daletech_cn/speedtest.html
 cp ./speedtest.html /mnt/1twd/smbshare/os_daletech_cn/speedtest.html
+echo "测速完成"
+date
