@@ -1,5 +1,6 @@
 #!/bin/bash
 TZ='Asia/Shanghai'
+cd /root/server_script/speedtest/
 export TZ
 echo "开始测速"
 rm speedtest.html
