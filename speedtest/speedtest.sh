@@ -1,9 +1,12 @@
 #!/bin/bash
+TZ='Asia/Shanghai'
+export TZ
+
 rm speedtest.html
 cat speedtestheader > speedtest.html
 date >> speedtest.html
 cat speedtestheader2 >> speedtest.html
-cat resultbak > result
+./speedtest > result
 date >> speedtest_log
 sed 's/)/)<br>/g' result > result2
 sed 's/Result/<br>Result/g' result2 > result3
