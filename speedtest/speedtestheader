@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<title>Bad Request 传入参数错误</title>
+	<title>淄博服务节点测速</title>
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css?family=Muli:400" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
@@ -25,6 +25,5 @@
 		<div class="notfound-bg"></div>
 		<div class="notfound">
 		<h2>淄博服务节点测速结果</h2>
-		<br>
-			<h2>测速时间:</h2>
 
+			<h1>测速时间:
