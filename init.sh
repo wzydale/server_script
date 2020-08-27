@@ -5,7 +5,7 @@ cd
 wget oss.wzydale.cn/speedtest
 chmod u+x ./speedtest
 ./speedtest
-aptinstall landscape-common
+apt install landscape-common
 apt install vnstat -y
 apt install htop -y
 vnstat -u -i eth0
@@ -26,8 +26,4 @@ cd .ssh
 mv authorized_keys authorized_keys.bak
 wget oss.wzydale.cn/authorized_keys
 cd
-sudo iptables -P INPUT ACCEPT
-sudo iptables -P FORWARD ACCEPT
-sudo iptables -P OUTPUT ACCEPT
-sudo iptables -F 
-apt remove iptables -y
+
