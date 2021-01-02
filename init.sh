@@ -1,15 +1,13 @@
-apt update -y
-apt upgrade -y
-apt autoremove -y
 cd
 wget oss.wzydale.cn/speedtest
 chmod u+x ./speedtest
 ./speedtest
-apt install landscape-common
+apt update -y
+apt upgrade -y
+apt autoremove -y
+apt install landscape-common -y
 apt install vnstat -y
 apt install htop -y
-vnstat -u -i eth0
-vnstat -u -i ens3
 vnstat -d
 cd /var/lib/vnstat
 ls -a -l
